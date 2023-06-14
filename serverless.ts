@@ -38,7 +38,7 @@ const serverlessConfiguration: AWS & Lift = {
     eventBridge: {
       useCloudFormation: true,
     },
-    region: "eu-west-1",
+    region: "us-east-1",
     iam: {
       role: {
         statements: [
@@ -63,15 +63,17 @@ const serverlessConfiguration: AWS & Lift = {
   },
   params: {
     default: {
-      spmsId: "1588143",
+      spmsId: "1204430",
     },
     staging: {
-      aceBucketName: "ace-apn-1588143-beta-us-west-2",
+      aceBucketName: "ace-apn-1204430-beta-us-east-1",
+      // SK: Replace this KMS ARN
       apnKmsArn:
         "arn:aws:kms:us-west-2:460522042068:key/8df608f6-7332-4678-af42-722e706b829d",
     },
     prod: {
-      aceBucketName: "ace-apn-1588143-prod-us-west-2",
+      aceBucketName: "ace-apn-1204430-prod-us-east-1",
+      // SK: Replace this KMS ARN
       apnKmsArn:
         "arn:aws:kms:us-west-2:249845964689:key/9fc269db-553b-422f-b9f7-de95c2c1352c",
     },
